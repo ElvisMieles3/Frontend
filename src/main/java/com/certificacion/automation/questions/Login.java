@@ -1,6 +1,6 @@
-package com.certificacion.automatizacion.wappi.questions;
+package com.certificacion.automation.questions;
 
-import com.certificacion.automatizacion.wappi.userinterfaces.LoginUserInterface;
+import com.certificacion.automation.userinterfaces.LoginUserInterfaces;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
@@ -11,13 +11,13 @@ public class Login implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {
-        actor.attemptsTo(WaitUntil.the((LoginUserInterface.RESPONSE_MESSAGE),
+        actor.attemptsTo(WaitUntil.the((LoginUserInterfaces.RESPONSE_MESSAGE),
                 WebElementStateMatchers.isVisible()));
-        return Text.of(LoginUserInterface.RESPONSE_MESSAGE).viewedBy(actor).asString();
+        return Text.of(LoginUserInterfaces.RESPONSE_MESSAGE).viewedBy(actor).asString();
+
     }
 
     public static Login message() {
-
         return new Login();
     }
 }

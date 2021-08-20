@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="2" name="Login" skipped="0" tests="2" time="14.96" timestamp="2021-08-16 07:56:03"><testcase name="enter the system having the credentials"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by xpath: /html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote/text()[1]" type="java.lang.AssertionError">
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Login" skipped="0" tests="1" time="11.2" timestamp="2021-08-19 10:08:59"><testcase name="Enter the system having the credentials"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by xpath: //html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote/text()[1]" type="java.lang.AssertionError">
 Expected: an element that is visible
-     but: no matching element found by xpath: /html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote/text()[1]</failure><system-err>
+     but: no matching element found by xpath: //html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote/text()[1]</failure><system-err>
 Expected: an element that is visible
-     but: no matching element found by xpath: /html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote/text()[1]
-com.certificacion.automatizacion.wappi.questions.Login.answeredBy(Login.java:14)
-com.certificacion.automatizacion.wappi.questions.Login.answeredBy(Login.java:10)
-com.certificacion.automatizacion.wappi.stepdefinitions.LoginDemoSite.userShouldSeeMessage(LoginDemoSite.java:48)
+     but: no matching element found by xpath: //html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote/text()[1]
+com.certificacion.automation.questions.Login.answeredBy(Login.java:14)
+com.certificacion.automation.questions.Login.answeredBy(Login.java:10)
+com.certificacion.automation.stepdefinitions.Login.userShouldSeeMessageElvis(Login.java:47)
 cucumber.runner.Runner.runPickle(Runner.java:80)
 </system-err></testcase></testsuite>
