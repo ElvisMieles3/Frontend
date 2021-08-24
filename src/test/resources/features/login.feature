@@ -25,4 +25,3 @@ Feature: Login
       | username | password | message                                                                    |
       | Elvis    | E        | Password too short.  The password must be at least 4 characters in length. |
       | E        | Elvis    | Password too short.  The usurname must be at least 4 characters in length. |
-
