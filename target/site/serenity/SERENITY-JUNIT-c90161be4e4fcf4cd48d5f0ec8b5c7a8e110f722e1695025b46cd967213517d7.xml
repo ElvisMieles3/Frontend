@@ -1,10 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Login" skipped="0" tests="1" time="11.2" timestamp="2021-08-19 10:08:59"><testcase name="Enter the system having the credentials"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by xpath: //html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote/text()[1]" type="java.lang.AssertionError">
-Expected: an element that is visible
-     but: no matching element found by xpath: //html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote/text()[1]</failure><system-err>
-Expected: an element that is visible
-     but: no matching element found by xpath: //html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote/text()[1]
-com.certificacion.automation.questions.Login.answeredBy(Login.java:14)
-com.certificacion.automation.questions.Login.answeredBy(Login.java:10)
-com.certificacion.automation.stepdefinitions.Login.userShouldSeeMessageElvis(Login.java:47)
-cucumber.runner.Runner.runPickle(Runner.java:80)
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="2" failures="0" name="Login" skipped="0" tests="3" time="26.41" timestamp="2021-08-22 09:02:52"><testcase name="Enter the system having the credentials"/><testcase name="Message validation when complete data is not sent."><error message="no such alert&#10;  (Session info: chrome=92.0.4515.159)&#10;Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'&#10;System info: host: 'MacBook-Pro-de-Wolox.local', ip: 'fe80:0:0:0:433:b692:54c7:b988%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_261'&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /var/folders/kg/l6knyh790ql...}, goog:chromeOptions: {debuggerAddress: localhost:56033}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 1d110bfc839e171f2fbdbf9f1f62dee4&#10;Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'&#10;System info: host: 'MacBook-Pro-de-Wolox.local', ip: 'fe80:0:0:0:433:b692:54c7:b988%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_261'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoAlertPresentException">no such alert
+  (Session info: chrome=92.0.4515.159)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MacBook-Pro-de-Wolox.local', ip: 'fe80:0:0:0:433:b692:54c7:b988%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /var/folders/kg/l6knyh790ql...}, goog:chromeOptions: {debuggerAddress: localhost:56033}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1d110bfc839e171f2fbdbf9f1f62dee4
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MacBook-Pro-de-Wolox.local', ip: 'fe80:0:0:0:433:b692:54c7:b988%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_261'
+Driver info: driver.version: unknown</error><system-err>no such alert
+  (Session info: chrome=92.0.4515.159)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MacBook-Pro-de-Wolox.local', ip: 'fe80:0:0:0:433:b692:54c7:b988%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /var/folders/kg/l6knyh790ql...}, goog:chromeOptions: {debuggerAddress: localhost:56033}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1d110bfc839e171f2fbdbf9f1f62dee4
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MacBook-Pro-de-Wolox.local', ip: 'fe80:0:0:0:433:b692:54c7:b988%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_261'
+Driver info: driver.version: unknown
+com.certificacion.automation.stepdefinitions.Login.userShouldSeeTheAlertMessage(Login.java:60)
+✽.user should see the alert message Password too short.  The password must be at least 4 characters in length.(src/test/resources/features/login.feature:22)
 </system-err></testcase></testsuite>

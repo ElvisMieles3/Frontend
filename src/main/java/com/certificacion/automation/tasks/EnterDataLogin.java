@@ -21,6 +21,7 @@ public class EnterDataLogin implements Task {
         actor.attemptsTo(Enter.theValue(loginData.getusername()).into(LoginUserInterfaces.ENTER_THE_USERNAME));
         actor.attemptsTo(Enter.theValue(loginData.getPassword()).into(LoginUserInterfaces.ENTER_THE_PASSWORD));
         actor.attemptsTo(Click.on(LoginUserInterfaces.SELECT_SAVE_BUTTON));
+
     }
 
     public static EnterDataLogin withData(LoginData loginData) {

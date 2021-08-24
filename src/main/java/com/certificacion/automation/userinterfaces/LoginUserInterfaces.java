@@ -20,5 +20,5 @@ public class LoginUserInterfaces {
 
     public static final Target RESPONSE_MESSAGE = Target.
             the("Response message Username")
-            .locatedBy("/html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote/text()[1]");
+            .locatedBy("//*[contains(text(),'The username:')]");
 }

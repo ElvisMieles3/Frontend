@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Enter the system having the credentials</title>
+    <title>Message validation when complete data is not sent.</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -79,7 +79,7 @@
             <a href="index.html" class="breadcrumbs">Home</a>
 
             > <a href="eda9645ecea73214dea660b9d79f3beae2edb1bb1ee566a2476b38cd1d69a575.html">Login</a>
-        > Enter the system having the credentials
+        > Message validation when complete data is not sent.
         </span>
         </div>
         <div class="rightbg"></div>
@@ -100,7 +100,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-08-2021 21:02</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-08-2021 21:03</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -133,10 +133,10 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span>
                             <span class="test-case-title">
-                                <span class="success-color">
-                                    Enter the system having the credentials
+                                <span class="error-color">
+                                    Message validation when complete data is not sent.
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -196,7 +196,7 @@
     <div class="story-title">
         <h3 class="story-header">Scenario Outline</h3>
 
-        <div class="scenario">Given that Elvis is in the portal<br>When he enters the credentials<br><table class='embedded'><thead><th>username</th><th>password</th></thead><tbody><tr><td>&lt;username&gt;</td><td>&lt;password&gt;</td></tr></tbody></table><br>Then user should see message The username:</div>
+        <div class="scenario">Given that Elvis is in the portal<br>When he enters the credentials<br><table class='embedded'><thead><th>username</th><th>password</th></thead><tbody><tr><td>&lt;username&gt;</td><td>&lt;password&gt;</td></tr></tbody></table><br>Then user should see the alert message &lt;message&gt;</div>
 
     </div>
 
@@ -216,16 +216,32 @@
                     <th>#</th>
                         <th>Username</th>
                         <th>Password</th>
+                        <th>Message</th>
                 </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="test-SUCCESS"><a href="#0">1</a></td>
-                            <td class="test-SUCCESS"><a
+                        <td class="test-ERROR"><a href="#0">1</a></td>
+                            <td class="test-ERROR"><a
                                     href="#0">Elvis</a>
                             </td>
-                            <td class="test-SUCCESS"><a
-                                    href="#0">Elvis*</a>
+                            <td class="test-ERROR"><a
+                                    href="#0">E</a>
+                            </td>
+                            <td class="test-ERROR"><a
+                                    href="#0">Password too short.  The password must be at least 4 characters in length.</a>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="test-ERROR"><a href="#1">2</a></td>
+                            <td class="test-ERROR"><a
+                                    href="#1">E</a>
+                            </td>
+                            <td class="test-ERROR"><a
+                                    href="#1">Elvis</a>
+                            </td>
+                            <td class="test-ERROR"><a
+                                    href="#1">Password too short.  The usurname must be at least 4 characters in length.</a>
                             </td>
                     </tr>
                 </tbody>
@@ -249,12 +265,12 @@
                 <tr class="step-table-separator">
                     <td colspan="5"></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-ERROR">
                     <td width="60" class="step-icon">
                         <a name="0"/>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection0 success-icon"
+                                <i class="fa fa-plus-square-o imgstepSection0 error-icon"
                                    style="margin-left: 20px; float:left;  padding-right:5px"></i>
                             </a>
                     </td>
@@ -263,23 +279,16 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block;">
                             <span class="top-level-step">
-                                Example #1: {username=Elvis, password=Elvis*}
+                                Example #1: {username=Elvis, password=E, message=Password too short.  The password must be at least 4 characters in length.}
                             </span>
                             </a>
 
                         </div>
                     </td>
-                        <td width="100" class="SUCCESS-text">
-                                <a href="c90161be4e4fcf4cd48d5f0ec8b5c7a8e110f722e1695025b46cd967213517d7_screenshots.html#screenshots?screenshot=0">
-                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
-                                         href="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
-                                         class="screenshot"
-                                         width="48" height="48"/>
-                                </a>
+                        <td width="100" class="ERROR-text">
                         </td>
-                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">13.43s</span></td>
+                    <td width="100"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step">12.55s</span></td>
                 </tr>
                     <tr>
                     <td colspan="5">
@@ -300,7 +309,7 @@
                         </div>
                     </td>
                         <td width="100" class="SUCCESS-text">
-                                <a href="c90161be4e4fcf4cd48d5f0ec8b5c7a8e110f722e1695025b46cd967213517d7_screenshots.html#screenshots?screenshot=1">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=0">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
                                     <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
                                          href="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
@@ -309,7 +318,7 @@
                                 </a>
                         </td>
                     <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">4.6s</span></td>
+                    <td width="100"><span class="nested-step">3.59s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -326,7 +335,7 @@
                         </div>
                     </td>
                         <td width="100" class="SUCCESS-text">
-                                <a href="c90161be4e4fcf4cd48d5f0ec8b5c7a8e110f722e1695025b46cd967213517d7_screenshots.html#screenshots?screenshot=2">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=1">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
                                     <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
                                          href="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
@@ -335,7 +344,7 @@
                                 </a>
                         </td>
                     <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">3.86s</span></td>
+                    <td width="100"><span class="nested-step">3.22s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -352,7 +361,7 @@
                         </div>
                     </td>
                         <td width="100" class="SUCCESS-text">
-                                <a href="c90161be4e4fcf4cd48d5f0ec8b5c7a8e110f722e1695025b46cd967213517d7_screenshots.html#screenshots?screenshot=3">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=2">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
                                     <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
                                          href="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
@@ -361,7 +370,7 @@
                                 </a>
                         </td>
                     <td width="100"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">3.49s</span></td>
+                    <td width="100"><span class="nested-group-step">2.88s</span></td>
                 </tr>
 
 
@@ -374,22 +383,22 @@
                     <td>
                         <div class="step-description">
                             <span class="nested-step">
-                                When he enters the credentials<br><table class='embedded'><thead><th>username</th><th>password</th></thead><tbody><tr><td>Elvis</td><td>Elvis*</td></tr></tbody></table>
+                                When he enters the credentials<br><table class='embedded'><thead><th>username</th><th>password</th></thead><tbody><tr><td>Elvis</td><td>E</td></tr></tbody></table>
                             </span>
 
                         </div>
                     </td>
                         <td width="100" class="SUCCESS-text">
-                                <a href="c90161be4e4fcf4cd48d5f0ec8b5c7a8e110f722e1695025b46cd967213517d7_screenshots.html#screenshots?screenshot=4">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=3">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
-                                         href="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
+                                    <img src="33aa3f96df19089cf1f66c6caa5d60346f974c65a348bd6e6469d5ad59f1000b.png"
+                                         href="33aa3f96df19089cf1f66c6caa5d60346f974c65a348bd6e6469d5ad59f1000b.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
                     <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">4.14s</span></td>
+                    <td width="100"><span class="nested-step">3.18s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -406,7 +415,7 @@
                         </div>
                     </td>
                         <td width="100" class="SUCCESS-text">
-                                <a href="c90161be4e4fcf4cd48d5f0ec8b5c7a8e110f722e1695025b46cd967213517d7_screenshots.html#screenshots?screenshot=5">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=5">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
                                     <img src="1756dc746d3a92318dc684bf11793355860e348434adde9c026f63e404f73d41.png"
                                          href="1756dc746d3a92318dc684bf11793355860e348434adde9c026f63e404f73d41.png"
@@ -415,7 +424,7 @@
                                 </a>
                         </td>
                     <td width="100"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">1.24s</span></td>
+                    <td width="100"><span class="nested-group-step">0.91s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -426,22 +435,22 @@
                     <td>
                         <div class="step-description">
                             <span class="nested-group-step">
-                                Elvis enters 'Elvis*' into Enter the password
+                                Elvis enters 'E' into Enter the password
                             </span>
 
                         </div>
                     </td>
                         <td width="100" class="SUCCESS-text">
-                                <a href="c90161be4e4fcf4cd48d5f0ec8b5c7a8e110f722e1695025b46cd967213517d7_screenshots.html#screenshots?screenshot=7">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=7">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="039044c88b7d133286b9d811c5381a80c96cf75cd722822a4cc0b5c45699088d.png"
-                                         href="039044c88b7d133286b9d811c5381a80c96cf75cd722822a4cc0b5c45699088d.png"
+                                    <img src="7d1779c499d7e4936820518e627164b7120f10785fbd4880aae0963f3abcdd8d.png"
+                                         href="7d1779c499d7e4936820518e627164b7120f10785fbd4880aae0963f3abcdd8d.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
                     <td width="100"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">0.84s</span></td>
+                    <td width="100"><span class="nested-group-step">0.83s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -458,17 +467,114 @@
                         </div>
                     </td>
                         <td width="100" class="SUCCESS-text">
-                                <a href="c90161be4e4fcf4cd48d5f0ec8b5c7a8e110f722e1695025b46cd967213517d7_screenshots.html#screenshots?screenshot=9">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=9">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
-                                         href="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
+                                    <img src="7d1779c499d7e4936820518e627164b7120f10785fbd4880aae0963f3abcdd8d.png"
+                                         href="7d1779c499d7e4936820518e627164b7120f10785fbd4880aae0963f3abcdd8d.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
                     <td width="100"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">1.28s</span></td>
+                    <td width="100"><span class="nested-group-step">0.53s</span></td>
                 </tr>
+
+                <tr class="test-ERROR">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">
+                                Then user should see the alert message Password too short.  The password must be at least 4 characters in length.
+                            </span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="ERROR-text">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=10">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="33aa3f96df19089cf1f66c6caa5d60346f974c65a348bd6e6469d5ad59f1000b.png"
+                                         href="33aa3f96df19089cf1f66c6caa5d60346f974c65a348bd6e6469d5ad59f1000b.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">ERROR</span></td>
+                    <td width="100"><span class="nested-group-step">5.77s</span></td>
+                </tr>
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="4" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">No alert present exception: no such alert</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-9""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-9">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.NoAlertPresentException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.certificacion.automation.stepdefinitions.Login.userShouldSeeTheAlertMessage(Login.java:60)<br />✽.user should see the alert message Password too short.  The password must be at least 4 characters in length.(src/test/resources/features/login.feature:22)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    </td>
+                    </tr>
+
+                    </table>
+                    </td>
+                    <tr>
+                <tr class="test-ERROR">
+                    <td width="60" class="step-icon">
+                        <a name="1"/>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                               style="display:block">
+                                <i class="fa fa-plus-square-o imgstepSection1 error-icon"
+                                   style="margin-left: 20px; float:left;  padding-right:5px"></i>
+                            </a>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                               style="display:block;">
+                            <span class="top-level-step">
+                                Example #2: {username=E, password=Elvis, message=Password too short.  The usurname must be at least 4 characters in length.}
+                            </span>
+                            </a>
+
+                        </div>
+                    </td>
+                        <td width="100" class="ERROR-text">
+                        </td>
+                    <td width="100"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step">12.23s</span></td>
+                </tr>
+                    <tr>
+                    <td colspan="5">
+                    <table id="stepSection1" style="display:none; width:100%">
 
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -479,22 +585,22 @@
                     <td>
                         <div class="step-description">
                             <span class="nested-step">
-                                Then user should see message The username:
+                                Given that Elvis is in the portal
                             </span>
 
                         </div>
                     </td>
                         <td width="100" class="SUCCESS-text">
-                                <a href="c90161be4e4fcf4cd48d5f0ec8b5c7a8e110f722e1695025b46cd967213517d7_screenshots.html#screenshots?screenshot=11">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=12">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
-                                         href="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
+                                    <img src="9e652733d7b1a46cb9d61624ee2fa8bb41eccc1da351429f96f48b16f861a771.png"
+                                         href="9e652733d7b1a46cb9d61624ee2fa8bb41eccc1da351429f96f48b16f861a771.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
                     <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">4.22s</span></td>
+                    <td width="100"><span class="nested-step">3.41s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -505,22 +611,22 @@
                     <td>
                         <div class="step-description">
                             <span class="nested-step">
-                                Then login should be 'The username:'
+                                Elvis open browser
                             </span>
 
                         </div>
                     </td>
                         <td width="100" class="SUCCESS-text">
-                                <a href="c90161be4e4fcf4cd48d5f0ec8b5c7a8e110f722e1695025b46cd967213517d7_screenshots.html#screenshots?screenshot=12">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=13">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
-                                         href="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
+                                    <img src="9e652733d7b1a46cb9d61624ee2fa8bb41eccc1da351429f96f48b16f861a771.png"
+                                         href="9e652733d7b1a46cb9d61624ee2fa8bb41eccc1da351429f96f48b16f861a771.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
                     <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">1.46s</span></td>
+                    <td width="100"><span class="nested-step">3.07s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -531,33 +637,202 @@
                     <td>
                         <div class="step-description">
                             <span class="nested-group-step">
-                                Elvis wait until target is ready
+                                Elvis opens the http://thedemosite.co.uk/savedata.php
                             </span>
 
                         </div>
                     </td>
                         <td width="100" class="SUCCESS-text">
-                                <a href="c90161be4e4fcf4cd48d5f0ec8b5c7a8e110f722e1695025b46cd967213517d7_screenshots.html#screenshots?screenshot=13">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=14">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
-                                         href="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png"
+                                    <img src="9e652733d7b1a46cb9d61624ee2fa8bb41eccc1da351429f96f48b16f861a771.png"
+                                         href="9e652733d7b1a46cb9d61624ee2fa8bb41eccc1da351429f96f48b16f861a771.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
                     <td width="100"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">0.76s</span></td>
+                    <td width="100"><span class="nested-group-step">2.71s</span></td>
                 </tr>
 
 
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-icon"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-step">
+                                When he enters the credentials<br><table class='embedded'><thead><th>username</th><th>password</th></thead><tbody><tr><td>E</td><td>Elvis</td></tr></tbody></table>
+                            </span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=15">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="df8704a7cde6e84fa73456c99be94cf6f129a05d05d3d3d7ae695b02c2d7ca92.png"
+                                         href="df8704a7cde6e84fa73456c99be94cf6f129a05d05d3d3d7ae695b02c2d7ca92.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">3.16s</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 60px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">
+                                Elvis enters 'E' into Enter the username
+                            </span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=17">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="8c5ab374ba090ee89b04e6bf03a557fa293ff8c6abb56ccdb130fec53d66571a.png"
+                                         href="8c5ab374ba090ee89b04e6bf03a557fa293ff8c6abb56ccdb130fec53d66571a.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">0.89s</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 60px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">
+                                Elvis enters 'Elvis' into Enter the password
+                            </span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=19">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="833adcf8a01509106e207f001bd5fc3ed39dc0c8e8e64081173d499ae7b7c8d0.png"
+                                         href="833adcf8a01509106e207f001bd5fc3ed39dc0c8e8e64081173d499ae7b7c8d0.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">0.85s</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 60px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">
+                                Elvis clicks on Select save button
+                            </span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=21">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="833adcf8a01509106e207f001bd5fc3ed39dc0c8e8e64081173d499ae7b7c8d0.png"
+                                         href="833adcf8a01509106e207f001bd5fc3ed39dc0c8e8e64081173d499ae7b7c8d0.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">0.47s</span></td>
+                </tr>
+
+                <tr class="test-ERROR">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">
+                                Then user should see the alert message Password too short.  The usurname must be at least 4 characters in length.
+                            </span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="ERROR-text">
+                                <a href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537_screenshots.html#screenshots?screenshot=22">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="df8704a7cde6e84fa73456c99be94cf6f129a05d05d3d3d7ae695b02c2d7ca92.png"
+                                         href="df8704a7cde6e84fa73456c99be94cf6f129a05d05d3d3d7ae695b02c2d7ca92.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">ERROR</span></td>
+                    <td width="100"><span class="nested-group-step">5.65s</span></td>
+                </tr>
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="4" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">No alert present exception: no such alert</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-18""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-18">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.NoAlertPresentException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.certificacion.automation.stepdefinitions.Login.userShouldSeeTheAlertMessage(Login.java:60)<br />✽.user should see the alert message Password too short.  The usurname must be at least 4 characters in length.(src/test/resources/features/login.feature:22)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    </td>
+                    </tr>
 
                     </table>
                     </td>
                     <tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-ERROR">
                     <td colspan="3"></td>
-                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>13.85s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>ERROR</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>12.56s</em></span></td>
                 </tr>
 
             </table>

@@ -13,7 +13,8 @@ public class Login implements Question<String> {
     public String answeredBy(Actor actor) {
         actor.attemptsTo(WaitUntil.the((LoginUserInterfaces.RESPONSE_MESSAGE),
                 WebElementStateMatchers.isVisible()));
-        return Text.of(LoginUserInterfaces.RESPONSE_MESSAGE).viewedBy(actor).asString();
+        return LoginUserInterfaces.RESPONSE_MESSAGE.resolveFor(actor).getText();
+        //return Text.of(LoginUserInterfaces.RESPONSE_MESSAGE).viewedBy(actor).asString();
 
     }
 

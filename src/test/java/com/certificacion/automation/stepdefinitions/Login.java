@@ -1,6 +1,7 @@
 package com.certificacion.automation.stepdefinitions;
 
 import com.certificacion.automation.models.LoginData;
+import com.certificacion.automation.questions.MessagePopPup;
 import com.certificacion.automation.tasks.EnterDataLogin;
 import com.certificacion.automation.tasks.OpenBrowser;
 import cucumber.api.java.After;
@@ -13,6 +14,7 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.thucydides.core.annotations.Managed;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 
 import java.util.List;
@@ -43,10 +45,21 @@ public class Login {
     }
 
     @Then("^user should see message (.*)$")
-    public void userShouldSeeMessageElvis(String login) {
+    public void userShouldSeeMessageElvis(String login) throws InterruptedException {
+
+        System.out.println("prueba 1 " + login);
+        Thread.sleep(2000);
         theActorInTheSpotlight().should(GivenWhenThen.seeThat(
                 com.certificacion.automation.questions.Login.message(),
-                org.hamcrest.Matchers.is(login)));
+                org.hamcrest.Matchers.equalTo(login)));
+    }
+
+    @Then("^user should see the alert message (.*)$")
+    public void userShouldSeeTheAlertMessage(String descriptionPoPup) throws Exception {
+        Thread.sleep(5000);
+        Alert alert = myBrowser.switchTo().alert();
+        theActorInTheSpotlight().should(seeThat(MessagePopPup.message(alert.getText()),
+                org.hamcrest.Matchers.is(descriptionPoPup)));
     }
 
     @After

@@ -8,9 +8,21 @@ Feature: Login
     When he enters the credentials
       | username   | password   |
       | <username> | <password> |
-    Then user should see message <userName>
-
+    Then user should see message The username:
     Examples:
       | username | password |
       | Elvis    | Elvis*   |
+
+
+  Scenario Outline:  Message validation when complete data is not sent.
+    Given that Elvis is in the portal
+    When he enters the credentials
+      | username   | password   |
+      | <username> | <password> |
+    Then user should see the alert message <message>
+
+    Examples:
+      | username | password | message                                                                    |
+      | Elvis    | E        | Password too short.  The password must be at least 4 characters in length. |
+      | E        | Elvis    | Password too short.  The usurname must be at least 4 characters in length. |
 

@@ -107,7 +107,7 @@
                 > <span class="truncate-40"><a
                     href="eda9645ecea73214dea660b9d79f3beae2edb1bb1ee566a2476b38cd1d69a575.html">Login</a></span>
                 > <span class="truncate-60"><a
-                    href="c90161be4e4fcf4cd48d5f0ec8b5c7a8e110f722e1695025b46cd967213517d7.html">Enter the system having the credentials </a></span>
+                    href="bd7d42eacff657038a25b07f065595c08a2fec8837991739f7d020269480a537.html">Message validation when complete data is not sent. </a></span>
                 > Screenshots
             </span>
         </div>
@@ -129,7 +129,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-08-2021 21:02</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-08-2021 21:03</span>
     <br style="clear:left"/>
 </div>
 
@@ -166,9 +166,9 @@ To: Have access to the portal.
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span>
                             <span class="test-case-title">
-                                <span class="success-color">Enter the system having the credentials
+                                <span class="error-color">Message validation when complete data is not sent.
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -184,29 +184,84 @@ To: Have access to the portal.
 
     <div class="story-title">
         <h3>Scenario:</h3>
-        <div class="scenario">Given that Elvis is in the portal<br>When he enters the credentials<br><table class='embedded'><thead><th>username</th><th>password</th></thead><tbody><tr><td>&lt;username&gt;</td><td>&lt;password&gt;</td></tr></tbody></table><br>Then user should see message The username:</div>
+        <div class="scenario">Given that Elvis is in the portal<br>When he enters the credentials<br><table class='embedded'><thead><th>username</th><th>password</th></thead><tbody><tr><td>&lt;username&gt;</td><td>&lt;password&gt;</td></tr></tbody></table><br>Then user should see the alert message &lt;message&gt;</div>
     </div>
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">No alert present exception: no such alert</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.NoAlertPresentException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.certificacion.automation.stepdefinitions.Login.userShouldSeeTheAlertMessage(Login.java:60)<br />✽.user should see the alert message Password too short.  The password must be at least 4 characters in length.(src/test/resources/features/login.feature:22)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource7193571684537191664.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png" title="Example #1: {username=Elvis, password=Elvis*}" width="2400"/>
                 <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png" title="Given that Elvis is in the portal" width="2400"/>
                 <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png" title="Elvis open browser" width="2400"/>
                 <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png" title="Elvis opens the http://thedemosite.co.uk/savedata.php" width="2400"/>
                 <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png" title="When he enters the credentials
 | username | password |
-| Elvis | Elvis* |" width="2400"/>
+| Elvis | E |" width="2400"/>
+                <img src="33aa3f96df19089cf1f66c6caa5d60346f974c65a348bd6e6469d5ad59f1000b.png" title="When he enters the credentials
+| username | password |
+| Elvis | E |" width="2400"/>
                 <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png" title="Elvis enters 'Elvis' into Enter the username" width="2400"/>
                 <img src="1756dc746d3a92318dc684bf11793355860e348434adde9c026f63e404f73d41.png" title="Elvis enters 'Elvis' into Enter the username" width="2400"/>
-                <img src="6d3fc7f15504be576c90dc6a925396b29da11153a4679fd94f7191b5f7987077.png" title="Elvis enters 'Elvis*' into Enter the password" width="2400"/>
-                <img src="039044c88b7d133286b9d811c5381a80c96cf75cd722822a4cc0b5c45699088d.png" title="Elvis enters 'Elvis*' into Enter the password" width="2400"/>
-                <img src="039044c88b7d133286b9d811c5381a80c96cf75cd722822a4cc0b5c45699088d.png" title="Elvis clicks on Select save button" width="2400"/>
-                <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png" title="Elvis clicks on Select save button" width="2400"/>
-                <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png" title="Then user should see message The username:" width="2400"/>
-                <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png" title="Then login should be 'The username:'" width="2400"/>
-                <img src="4c29259654304c258312889347be79ed9f41155193926d1d785a286160c7ca69.png" title="Elvis wait until target is ready: <span class='success-color'>SUCCESS</span>" width="2400"/>
+                <img src="1756dc746d3a92318dc684bf11793355860e348434adde9c026f63e404f73d41.png" title="Elvis enters 'E' into Enter the password" width="2400"/>
+                <img src="7d1779c499d7e4936820518e627164b7120f10785fbd4880aae0963f3abcdd8d.png" title="Elvis enters 'E' into Enter the password" width="2400"/>
+                <img src="7d1779c499d7e4936820518e627164b7120f10785fbd4880aae0963f3abcdd8d.png" title="Elvis clicks on Select save button" width="2400"/>
+                <img src="33aa3f96df19089cf1f66c6caa5d60346f974c65a348bd6e6469d5ad59f1000b.png" title="Then user should see the alert message Password too short.  The password must be at least 4 characters in length." width="2400"/>
+                <img src="33aa3f96df19089cf1f66c6caa5d60346f974c65a348bd6e6469d5ad59f1000b.png" title="Then user should see the alert message Password too short.  The password must be at least 4 characters in length." width="2400"/>
+                <img src="9e652733d7b1a46cb9d61624ee2fa8bb41eccc1da351429f96f48b16f861a771.png" title="Given that Elvis is in the portal" width="2400"/>
+                <img src="9e652733d7b1a46cb9d61624ee2fa8bb41eccc1da351429f96f48b16f861a771.png" title="Elvis open browser" width="2400"/>
+                <img src="9e652733d7b1a46cb9d61624ee2fa8bb41eccc1da351429f96f48b16f861a771.png" title="Elvis opens the http://thedemosite.co.uk/savedata.php" width="2400"/>
+                <img src="9e652733d7b1a46cb9d61624ee2fa8bb41eccc1da351429f96f48b16f861a771.png" title="When he enters the credentials
+| username | password |
+| E | Elvis |" width="2400"/>
+                <img src="df8704a7cde6e84fa73456c99be94cf6f129a05d05d3d3d7ae695b02c2d7ca92.png" title="When he enters the credentials
+| username | password |
+| E | Elvis |" width="2400"/>
+                <img src="9e652733d7b1a46cb9d61624ee2fa8bb41eccc1da351429f96f48b16f861a771.png" title="Elvis enters 'E' into Enter the username" width="2400"/>
+                <img src="8c5ab374ba090ee89b04e6bf03a557fa293ff8c6abb56ccdb130fec53d66571a.png" title="Elvis enters 'E' into Enter the username" width="2400"/>
+                <img src="8c5ab374ba090ee89b04e6bf03a557fa293ff8c6abb56ccdb130fec53d66571a.png" title="Elvis enters 'Elvis' into Enter the password" width="2400"/>
+                <img src="833adcf8a01509106e207f001bd5fc3ed39dc0c8e8e64081173d499ae7b7c8d0.png" title="Elvis enters 'Elvis' into Enter the password" width="2400"/>
+                <img src="833adcf8a01509106e207f001bd5fc3ed39dc0c8e8e64081173d499ae7b7c8d0.png" title="Elvis clicks on Select save button" width="2400"/>
+                <img src="df8704a7cde6e84fa73456c99be94cf6f129a05d05d3d3d7ae695b02c2d7ca92.png" title="Then user should see the alert message Password too short.  The usurname must be at least 4 characters in length." width="2400"/>
+                <img src="df8704a7cde6e84fa73456c99be94cf6f129a05d05d3d3d7ae695b02c2d7ca92.png" title="Then user should see the alert message Password too short.  The usurname must be at least 4 characters in length.: <span class='error-color'>ERROR</span>" width="2400"/>
             </div>
         </div>
 
